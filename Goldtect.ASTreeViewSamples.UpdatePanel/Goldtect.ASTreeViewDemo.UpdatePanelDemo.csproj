@@ -43,8 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Goldtect.ASTreeView">
-      <HintPath>..\packages\ASTreeView.1.6.0.2\lib\net40\Goldtect.ASTreeView.dll</HintPath>
+    <Reference Include="Goldtect.ASTreeView, Version=1.6.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ASTreeView.1.6.0.3\lib\net40\Goldtect.ASTreeView.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
