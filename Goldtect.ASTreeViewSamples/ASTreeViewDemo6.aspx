@@ -14,6 +14,15 @@
 
     <script src="<%=ResolveUrl("~/Scripts/astreeview/astreeview.min.js")%>" type="text/javascript"></script>
     <script src="<%=ResolveUrl("~/Scripts/astreeview/contextmenu.min.js")%>" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        function nodeSelectHandler(elem) {
+            var val = "selected node:" + elem.parentNode.getAttribute("treeNodeValue");
+            document.getElementById("<%=divConsole.ClientID %>").innerHTML
+			+= (">>" + val + "<br />");
+
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">	
@@ -71,8 +80,8 @@
                                         EnableHalfCheckedAsChecked="true"
                                         RequiredValidatorValidationGroup="vgSelect" 
                                         EnableContextMenuAdd="false" 
-                                        EnableCloseOnNodeSelection="false"
-                                        
+                                        EnableCloseOnNodeSelection="true"
+						            OnNodeSelectedScript="nodeSelectHandler(elem);"
                                     EnableAjaxOnEditDelete="true"
                                     EnableContextMenuDelete="false"
                                     AddNodeProvider="~/ASTreeViewDemo6.aspx"
